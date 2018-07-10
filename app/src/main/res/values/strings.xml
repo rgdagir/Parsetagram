@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Parsetagram</string>
+    <string name="myAppId">parsetagramId</string>
+    <string name="server">https://parsetagram-fb.herokuapp.com/parse/</string>
+    <string name="login">Login</string>
+    <string name="noAcc">No account? Sign up here!</string>
+    <string name="signUp">Sign up</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    
+    <string name="hintName">Name </string>
+    <string name="hintEmail">Email </string>
+    <string name="hintUsername">Username </string>
+    <string name="hintPassword">Password </string>
+
+</resources>
