@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.parse.LogInCallback;
 import com.parse.ParseException;
@@ -28,6 +29,11 @@ public class MainActivity extends AppCompatActivity {
         passwordInput = findViewById(R.id.passwordContainer);
         loginBtn = findViewById(R.id.loginBtn);
         signUpBtn = findViewById(R.id.signUpBtn);
+
+        ParseUser currentUser = ParseUser.getCurrentUser();
+        if (currentUser != null) { // then prompt the home activity, not the login screen
+            goHome();
+        }
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,11 +60,19 @@ public class MainActivity extends AppCompatActivity {
             public void done(ParseUser user, ParseException e) {
                 if (e == null){
                     Log.d("Login", "Success!");
+                    Toast.makeText(MainActivity.this, "@string/logInSuccess", 5).show();
+                    goHome();
                 } else {
                     Log.d("Login", "Errrouuuuuu!");
+                    Toast.makeText(MainActivity.this, "@string/wrongCredentials", 5).show();
                     e.printStackTrace();
                 }
             }
         });
+    }
+
+    public void goHome(){
+        Intent itsGoingHome = new Intent(MainActivity.this, HomeActivity.class);
+        startActivity(itsGoingHome);
     }
 }

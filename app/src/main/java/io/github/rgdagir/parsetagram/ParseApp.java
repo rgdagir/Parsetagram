@@ -29,14 +29,9 @@ public class ParseApp extends Application {
         // clientKey is not needed unless explicitly configured
         // any network interceptors must be added with the Configuration Builder given this syntax
         Parse.initialize(new Parse.Configuration.Builder(this)
-                .applicationId("@string/myAppId")
+                .applicationId("parsetagramId")
                 .clientKey(null)
                 .clientBuilder(builder)
                 .server("https://parsetagram-fb.herokuapp.com/parse/").build());
-
-        // Let's test it outttt
-        ParseObject testObject = new ParseObject("TestObject");
-        testObject.put("foo", "bar");
-        testObject.saveInBackground();
     }
 }

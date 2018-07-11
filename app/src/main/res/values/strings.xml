@@ -6,10 +6,21 @@
     <string name="noAcc">No account? Sign up here!</string>
     <string name="signUp">Sign up</string>
     <string name="title_activity_sign_up">SignUpActivity</string>
-    
-    <string name="hintName">Name </string>
-    <string name="hintEmail">Email </string>
-    <string name="hintUsername">Username </string>
-    <string name="hintPassword">Password </string>
+
+    <string name="hintName">Name</string>
+    <string name="hintEmail">Email</string>
+    <string name="hintUsername">Username</string>
+    <string name="hintPassword">Password</string>
+    <string name="accCreated">Your account has been successfully created!</string>
+
+    <string name="logInSuccess">You\'ve successfully logged in!</string>
+
+    <string name="wrongCredentials">Wrong username or password. Try again.</string>
+
+    <string name="home">Home</string>
+    <string name="explore">Explore</string>
+    <string name="postPic">Post a Picture</string>
+    <string name="notifs">Notifications</string>
+    <string name="profile">Profile</string>
 
 </resources>

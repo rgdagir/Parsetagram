@@ -16,6 +16,23 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    defaultConfig {
+        vectorDrawables.useSupportLibrary = true
+    }
+}
+
+ext {
+    supportLibVersion = '27.1.1'  // variable that can be referenced to keep support libs consistent
+}
+
+buildscript {
+    repositories {
+        jcenter()
+        google()  // new as of Gradle v4.1 (not to be confused the the Android Gradle plugin below)
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.3'
+    }
 }
 
 dependencies {
@@ -29,5 +46,11 @@ dependencies {
     implementation 'com.parse.bolts:bolts-android:1.4.0'
     implementation 'com.parse:parse-android:1.17.3'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.8.1'
-    // for logging API calls to LogCat
+    implementation "com.android.support:appcompat-v7:${supportLibVersion}"
+    implementation "com.android.support:design:${supportLibVersion}"
+    implementation "com.android.support:recyclerview-v7:${supportLibVersion}"
+    implementation "com.android.support:percent:${supportLibVersion}"
+    implementation "com.android.support:support-vector-drawable:${supportLibVersion}" // VectorDrawableCompat
+    implementation "com.android.support:animated-vector-drawable:${supportLibVersion}" // AnimatedVectorDrawableCompat
+    implementation "com.android.support:transition:${supportLibVersion}"
 }
