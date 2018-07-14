@@ -44,7 +44,7 @@ public class SignUpActivity extends AppCompatActivity {
                 user.signUpInBackground(new SignUpCallback() {
                     public void done(ParseException e) {
                         if (e == null) {
-                            Toast.makeText(SignUpActivity.this, "@string/accCreated", 5).show();
+                            Toast.makeText(SignUpActivity.this, "Account created with success!", 5).show();
                             finish();
                         } else {
                             Log.e("Sign Up Failed!", e.toString());
