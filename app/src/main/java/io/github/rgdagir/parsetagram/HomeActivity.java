@@ -160,7 +160,7 @@ public class HomeActivity extends AppCompatActivity implements CameraFragment.On
 
         ActionBar actionBar = getSupportActionBar();
 
-        actionBar.setTitle("");
+        actionBar.setTitle("Instagram");
         actionBar.setLogo(R.drawable.nav_logo_whiteout);
         actionBar.setHomeButtonEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);

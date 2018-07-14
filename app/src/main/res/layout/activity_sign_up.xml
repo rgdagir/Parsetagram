@@ -8,22 +8,22 @@
 
     <EditText
         android:id="@+id/signUpName"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="47dp"
+        android:layout_marginTop="75dp"
         android:ems="10"
         android:hint="@string/hintName"
         android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/signUpEmail"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="136dp"
         android:ems="10"
         android:hint="@string/hintEmail"
         android:inputType="textEmailAddress"
@@ -32,11 +32,11 @@
 
     <EditText
         android:id="@+id/signUpUsername"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="202dp"
+        android:layout_marginTop="200dp"
         android:ems="10"
         android:hint="@string/hintUsername"
         android:inputType="textPersonName"
@@ -45,11 +45,10 @@
 
     <EditText
         android:id="@+id/signUpPassword"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="193dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
         android:ems="10"
         android:hint="@string/hintPassword"
         android:inputType="textPassword"
@@ -58,14 +57,23 @@
 
     <Button
         android:id="@+id/confirmSignUp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="115dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="196dp"
         android:text="@string/signUp"
         tools:layout_editor_absoluteX="58dp"
         tools:layout_editor_absoluteY="231dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        app:srcCompat="@drawable/nav_logo_whiteout" />
 
 
 </RelativeLayout>
