@@ -23,4 +23,8 @@
     <string name="notifs">Notifications</string>
     <string name="profile">Profile</string>
 
+    <string name="caption">Write a caption...</string>
+
+    <string name="post">Post</string>
+
 </resources>

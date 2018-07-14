@@ -48,6 +48,7 @@ public class CameraFragment extends Fragment {
     public interface OnItemSelectedListener {
         // This can be any number of events to be sent to the activity
         void onLaunchCamera();
+        void killFragment();
     }
 
     @Override
@@ -94,9 +95,10 @@ public class CameraFragment extends Fragment {
             public void done(ParseException e) {
                 if (e == null){
                     Log.d("Post creation!", "yay");
+                    listener.killFragment();
                 } else {
                     Log.d("Post creation", "failed");
-
+                    Toast.makeText(getContext(), "Post failed....", 1).show();
                     e.printStackTrace();
                 }
             }

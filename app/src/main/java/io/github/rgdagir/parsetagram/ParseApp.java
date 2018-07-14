@@ -15,7 +15,7 @@ public class ParseApp extends Application {
         super.onCreate();
 
         // Use for troubleshooting -- remove this line when live
-        Parse.setLogLevel(Parse.LOG_LEVEL_DEBUG);
+        Parse.setLogLevel(Parse.LOG_LEVEL_VERBOSE);
 
         // Use for monitoring Parse OkHttp traffic
         // Can be Level.BASIC, Level.HEADERS, or Level.BODY
@@ -24,6 +24,9 @@ public class ParseApp extends Application {
         HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor();
         httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         builder.networkInterceptors().add(httpLoggingInterceptor);
+
+        // Registering the parse models
+        ParseObject.registerSubclass(Post.class);
 
         // set applicationId, and server based on the values of the Heroku app
         // clientKey is not needed unless explicitly configured
